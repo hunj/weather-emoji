@@ -2,7 +2,6 @@ module WeatherEmoji
   GEOIP_URI = "http://freegeoip.net/json/"
   API_KEY = "17928230b610439be8e3f005b7245c8a"
 
-
   # get coordinates for given IP address
   def self.get_coordinates ip_addr=nil
     raise ArgumentError.new('ip_addr not String') unless !ip_addr or ip_addr.is_a? String

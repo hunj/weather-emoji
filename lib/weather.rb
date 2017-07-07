@@ -5,10 +5,10 @@ require_relative 'weather-emoji/api'
 # require_relative 'weather-emoji/emoji'
 
 module WeatherEmoji
-  # wat do here?
+  def self.weather
+    coord = get_coordinates
+    result = get_weather_for_coordinates coord, 'c'
+    data = consume_weather_data result
+    WeatherEmoji::print data
+  end
 end
-
-coord = WeatherEmoji::get_coordinates
-result = WeatherEmoji::get_weather_for_coordinates coord, 'c'
-data = WeatherEmoji::consume_weather_data result
-WeatherEmoji::print data
