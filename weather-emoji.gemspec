@@ -5,6 +5,7 @@ require 'weather-emoji/version'
 
 Gem::Specification.new do |s|
   s.name        = 'weather-emoji'
+  s.executables << 'weather'
   s.version     = WeatherEmoji::VERSION
   s.date        = '2017-07-07'
   s.summary     = "Show weather in emoji"
