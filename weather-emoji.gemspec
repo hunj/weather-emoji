@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.email       = 'admin@hunj.me'
   s.files       = `git ls-files`.split("\n")
   s.homepage    =
-    'http://rubygems.org/gems/weather-emoji'
+    'https://github.com/hunj/weather-emoji'
   s.license       = 'Beerware'
 end
