@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'weather-emoji'
-WeatherEmoji::weather
+p WeatherEmoji::weather
