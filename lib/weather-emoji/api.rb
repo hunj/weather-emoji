@@ -15,8 +15,8 @@ module WeatherEmoji
       lon = response["longitude"]
       [lat, lon]
     rescue => e
-      p "no internet connection?"
-      exit
+      p e.backtrace
+      raise "no internet connection?"
     end
   end
 
