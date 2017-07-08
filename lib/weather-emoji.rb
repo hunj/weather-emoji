@@ -9,6 +9,6 @@ module WeatherEmoji
     coord = get_coordinates
     result = get_weather_for_coordinates coord, 'c'
     data = consume_weather_data result
-    WeatherEmoji::print data
+    WeatherEmoji::stringify data
   end
 end
