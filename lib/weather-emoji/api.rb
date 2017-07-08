@@ -91,9 +91,9 @@ module WeatherEmoji
   end
 
   def self.stringify weather_data
-    "Now:      #{weather_data[:current][:code]} (#{weather_data[:current][:temp]}ºC / #{weather_data[:current][:humidity]}%)
-Today:    #{weather_data[:today][:code]} (#{weather_data[:today][:min]} - #{weather_data[:today][:max]}ºC)
-Tomorrow: #{weather_data[:tomorrow][:code]} (#{weather_data[:tomorrow][:min]} - #{weather_data[:tomorrow][:max]}ºC)"
+    "Now:      #{weather_data[:current][:code].to_emoji} (#{weather_data[:current][:temp].to_i}ºC/#{weather_data[:current][:humidity]}%)
+Today:    #{weather_data[:today][:code].to_emoji} (#{weather_data[:today][:min].to_i}-#{weather_data[:today][:max].to_i}ºC)
+Tomorrow: #{weather_data[:tomorrow][:code].to_emoji} (#{weather_data[:tomorrow][:min].to_i}-#{weather_data[:tomorrow][:max].to_i}ºC)"
   end
 
 end
