@@ -1,23 +1,44 @@
 # Weather-emoji
 ​:gem:​ Display current, today, and tomorrow's forecast in command line.
 
+It displays a brief summary of:
+- Current weather, temperature, and humidity
+- Today's forecast (could rain later today no?)
+- Tomorrow's forecast (so you don't forget your umbrella)
+
+The forecasts also contain min-max temperatures as well.
+
 ## Example Usage
 
 ```shell
 $ weather
-Now:  	  ☀️ (25ºC)
-Today:    ☁️ (20-30ºC)
-Tomorrow: ⚡️ (15-25ºC)
+Now:      🌤 (23ºC/57%)
+Today:    🌞 (16-23ºC)
+Tomorrow: 🌞 (17-24ºC)
+```
+
+You can also hit up an IP address or a hostname:
+
+```shell
+$ weather github.com
+Now:      ⚡ (31ºC/55%)
+Today:    🌞 (14-31ºC)
+Tomorrow: 🌞 (12-19ºC)
 ```
 
 ## Implementation Progress
 
+The following briefly explains the logic of how the weather is fetched and displayed; also, this serves as a to-do list.
+
 - [x] Geolocate current IP
 - [x] Get weather information
 - [x] Consume weather information
-- [ ] Prettify weather information
-- [ ] Add emoji for each weather code
-- [ ] Turn this into a gem
+- [x] Prettify weather information
+- [x] Add emoji for each weather code
+- [x] Turn this into a gem
+- [ ] Add fahrenheit support
+- [ ] Add moon phase
+- [ ] Add
 
 ## Spec
 
