@@ -2,7 +2,7 @@ require 'net/http'
 require 'json'
 
 require_relative 'weather-emoji/api'
-# require_relative 'weather-emoji/emoji'
+require_relative 'weather-emoji/emoji'
 
 module WeatherEmoji
   def self.weather
