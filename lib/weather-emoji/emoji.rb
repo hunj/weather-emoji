@@ -22,25 +22,37 @@ class Integer
   end
 
   # corresponding emoji for one single weather code.
-  # TODO verify each weather code to emoji conversion is accurate
   def to_emoji
     case self
-    when (200...300)
-      "\u{26A1}" # thunderstorm
-    when (300...400)
+    when (200..299), 960, 961
+      "\u{26A1}"  # thunderstorm
+    when (300..399)
       "\u{1F326}" # light rain (drizzle)
-    when (500...600)
-      "\u{2614}" # rain
+    when (500..599)
+      "\u{2614}"  # rain
+    when (600..699)
     when 800
       "\u{1F31E}" # clear sky
     when 801
-      "\u{26C5}" # few clouds
+      "\u{26C5}"  # few clouds
     when 802
       "\u{1F324}" # scattered clouds
     when 803
       "\u{1F325}" # broken clouds
     when 804
-      "\u{2601}" # overcast clouds
+      "\u{2601}"  # overcast clouds
+    when 900, 962
+      "\u{1F32A}" # tornado
+    when 903
+      "\u{2744}"  # cold
+    when 904
+      "\u{1F525}" # hot
+    when 905, 957
+      "\u{1F32C}" # windy
+    when 906, 958, 959
+      "\u{1F30A}" # hail
+    else
+      "\u{1F30A}" # error
     end
   end
 end
