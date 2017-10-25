@@ -1,4 +1,32 @@
 #!/usr/bin/env ruby
 
 require 'weather-emoji'
-puts WeatherEmoji::weather ARGV[0]
+require 'optparse'
+
+options = {:host => nil}
+
+# Rules to parse the command line arguments.
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: weather [options]"
+
+  opts.on('-c', '--celsius', 'to use Metric (Celsius)') do
+    options[:unit] = "metric";
+  end
+
+  opts.on('-f', '--fahrenheit', 'to use Imperial (Fahrenheit)') do
+    options[:unit] = "imperial";
+  end
+
+  opts.on('-h', '--help', 'Display this help message') do
+    puts opts
+    exit
+  end
+end
+
+# Parse arguments according to above rules; leftovers are kept in ARGV
+parser.parse!
+
+# print the target hostname
+options[:host] = ARGV[0]
+
+puts WeatherEmoji::weather options
