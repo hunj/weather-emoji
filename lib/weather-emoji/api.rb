@@ -112,7 +112,9 @@ module WeatherEmoji
 
     weather_data
   end
-
+  
+  # Returns the appropriate formatting for unit
+  # +weather_data+ - the data to get current unit formatting from
   def self.unit_code_for weather_data
     if weather_data[:unit] == "metric"
       "C"
@@ -121,6 +123,13 @@ module WeatherEmoji
     end
   end
 
+  # Returns the current UNIX timestamp
+  def self.current_time
+    Time.now.to_i
+  end
+
+  # Returns the prettified string for the weather data.
+  # +weather_data+ - the weather data to stringify.
   def self.stringify weather_data
     unit = unit_code_for weather_data
     "Now:      #{weather_data[:current][:code].to_emoji} (#{weather_data[:current][:temp].to_i}º#{unit}/#{weather_data[:current][:humidity]}%)
