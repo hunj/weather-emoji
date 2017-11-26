@@ -63,4 +63,4 @@ Check [OpenWeatherMap's doc](https://openweathermap.org/weather-conditions)
 
 ## References
 
-- Open
+- OpenWeatherMap API
